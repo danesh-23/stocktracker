@@ -72,8 +72,12 @@ TA-DAA!! You can now become the Stock-King with all this power :crown:
 
 ## A little about this project  
 
-
-
+This project has a little bit of a backstory to it that is interesting if you're interested. Since you're still reading, I take it you are :) So, I was talking to my dad on a Saturday morning and he was telling me about his stocks and how some of them were going down due to the economy and how much he had made and lost over the years and he mentioned that it would be really useful to keep an eye out for pharmaceutical/healthcare sector stocks as with the pandemic going on, all eyes were focused on them and it was ripe for potential in an investors eyes. He then asked me, knowing my fascination and skills for automating and scraping data to make my life easier, if I could make a program that can monitor stocks in certain sectors and somehow visualize the data to show its pattern of growth.  
+  
+This piqued my interest and I set out on creating StockTracker, a program that could track stocks in certain sectors and help investors to find new and random stocks that matched their criteria. I worked on StockTracker while studying for technical interview questions at Google/Apple etc. just for the fun of it so I worked on it on the rest days I had once a week as a relaxant for a few weeks. Once I was done studying, I worked on it daily trying to implement the core features and learn how I could go about doing them as I was unfamiliar with some external libraries completely so I studied them and searched how I could do certain things and managed to complete the system a few weeks later, many ideas of features yet to be implemented but a good start.  
+  
+What I took away from this project aside from the significant knowledge on certain libraries and a little more on stocks, was a realisation that aside from the amazement of seeing something you built in the hands of others; the true joy for me was in solving obstacles people have(maybe not huge obstacles/perfect solutions) and using a machine to do that. The very idea of using a machine to aid in solving real problems(small or large) people have simply grows the burning passion and love I have for what I do. (sorry for the slightly longer background on the project than usual) Hope you enjoyed the journey :)  
+  
 ## Reporting Bugs
 
 To report a bug, you may use the [Bug Report template](.github/ISSUE_TEMPLATE/bug_report.md)
