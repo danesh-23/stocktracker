@@ -38,7 +38,7 @@ def find_pharma_companies_names(size_company="small", number=5):
                                          "li:nth-child(2) > button:nth-child(1)").click()
     browser.find_element_by_css_selector(".symbol-screener__apply-button").click()
 
-    pyautogui.scroll(-45)
+    pyautogui.scroll(-50)
     time.sleep(5)
 
     soup = BeautifulSoup(browser.page_source, "html.parser")
@@ -109,7 +109,7 @@ def gather_stock_data(link):
         except:
             split_dates.pop(index)
         index += 1
-    print("Finding stock for {}".format(stock_name))
+    print("Gathering data for {} stock".format(stock_name))
     with open("stock-{}.txt".format(stock_name), "w") as files:
         files.write("Date,High,Low\n")
         for values in split_dates:
