@@ -27,14 +27,61 @@ pip install PyAutoGUI
 ```
 cd *PATH-OF-STOCKTRACKER.PY*
 ```
-![picture]()  
+![](images/instructions1.png)  
+  
 4. To begin running the program, if youre using an IDE, you just need to run it and if youre using a CLI, simply call python on the file.
 ```
 python3 stocktracker.py
 ```
-![picture]()  
+![](images/instructions2.png)  
+  
 You have now have your very own *Warren Buffett*  
   
 Now you have 2 options; 
   * Find new stocks in a particular field and track its data.(healthcare only for now)
-  * Track data for a particular stock you have in mind.  
+  * Track data for a particular stock you have in mind. 
+  
+5. If you choose the first option to find new stocks, it will ask you for some characteristics you're looking for such as the size of the companies eg: Mega(>200 billion)/Large(10b-200b) etc. Then, it will ask you how many new companies you want to find and gather data for; the more companies it finds, the longer it takes to gether more data. 
+
+![](images/instructions3.png)  
+
+Now, watch the magic happen!  
+  
+6. StockTracker will open up a FireFox browser and navigate to the NASDAQ website and select the options you chose automatically and choose stocks that fit your preference.  
+  
+![](images/instructions4.png)  
+![](images/instructions5.png)  
+
+7. Now, it starts gathering the historical data for each of the new stocks it found and should take a couple of minutes depending on the number of companies you wanted it to find as well as the strength of your internet connection but for the default of 5 companies, it should take approximately 3-10 minutes and will look like below once it's done.  
+
+![](images/instructions6.png). 
+
+You can now see all the downloaded stocks historical data as well as the charts drawn from this data in your current folder and these are what the data would look like.  
+![](images/instructions7.png)  
+![](images/instructions8.png)  
+![](images/instructions9.png)  
+
+8. Now that you have successfully found new stocks for yourself, you can use our second option and track a specific stock which you like. Selecting the second option will show the following.  
+
+![](images/instructions10.png)  
+
+9. You only need to enter the symbol for the company and in this example we use Shopify which is SHOP and it produces the same result as above, it saves the data but upon completion, it automatically presents the graph produced from the gathered data as shown below.
+![](images/instructions11.png)  
+
+TA-DAA!! You can now become the Stock-King with all this power :crown:  
+
+## A little about this project  
+
+
+
+## Reporting Bugs
+
+To report a bug, you may use the [Bug Report template](.github/ISSUE_TEMPLATE/bug_report.md)
+
+## Feature Request
+
+If you have any ideas of interesting features you would like added, you may fill the [Feature Request form](.github/ISSUE_TEMPLATE/feature_request.md)
+
+## Project maintainers
+
+This project is maintained by Danesh Rajasolan(me). Use of this project under the [MIT License](LICENSE.md).
