@@ -1,5 +1,6 @@
 import datetime
 import time
+from pathlib import Path
 import pyautogui
 from selenium import webdriver
 import matplotlib.pyplot as plt
@@ -7,6 +8,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import mplcursors
 import numpy as np
+
 from multiprocessing.dummy import Pool as ThreadPool
 
 
@@ -109,8 +111,9 @@ def gather_stock_data(link):
         except:
             split_dates.pop(index)
         index += 1
-    print("Gathering data for {} stock".format(stock_name))
-    with open("stock-{}.txt".format(stock_name), "w") as files:
+    print("\nGathering data for {} stock".format(stock_name))
+    Path("data/{}/".format(stock_name)).mkdir(parents=True, exist_ok=True)
+    with open("data/{}/{}.txt".format(stock_name, stock_name), "w") as files:
         files.write("Date,High,Low\n")
         for values in split_dates:
             if "denominator" not in values:
@@ -125,11 +128,11 @@ def gather_stock_data(link):
     print("Done\n")
 
     browser.quit()
-    return "stock-{}.txt".format(stock_name)
+    return "data/{}/{}.txt".format(stock_name, stock_name)
 
 
 def plot_data_graphs(filename, plot_now=False):
-    stock_name = filename.split("-")[1].split(".")[0]
+    stock_name = filename.split("/")[1]
     df = pd.read_csv(filename)
     date = df["Date"][::-1]
     fig, ax = plt.subplots(figsize=(18, 9))
@@ -159,7 +162,7 @@ def plot_data_graphs(filename, plot_now=False):
 
     plt.tight_layout()
     plt.legend()
-    plt.savefig("stock-{}".format(stock_name), dpi=250)
+    plt.savefig("data/{}/graph-{}".format(stock_name, stock_name), dpi=250)
     if plot_now:
         plt.show()
 
